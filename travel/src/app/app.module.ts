@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { TestDirective } from './test.directive';
+import { CountrylistComponent } from './countrylist/countrylist.component';
 
 const Routes : Routes = [
   { path: "", component: HeaderComponent},
@@ -24,7 +25,8 @@ const Routes : Routes = [
     LoginComponent,
     HeaderComponent,
     SidemenuComponent,
-    TestDirective
+    TestDirective,
+    CountrylistComponent
   ],
   imports: [
     BrowserModule,

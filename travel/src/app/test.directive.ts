@@ -4,7 +4,7 @@ import { Directive, ElementRef, TemplateRef, Input, ViewContainerRef, HostListen
   selector: '[appTest]'
 })
 export class TestDirective {
-    constructor(private templateRef: TemplateRef<any>,
+    constructor(private templateRef: TemplateRef <any>,
                 private viewContainer: ViewContainerRef) {
   }
   @Input() set appTest(condition: boolean){
