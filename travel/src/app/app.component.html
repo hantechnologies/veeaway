@@ -1,2 +1,6 @@
-  <app-header></app-header>
 
+<div>
+<form #ddForm="ngForm" (ngSubmit)="onSubmit()">
+  <input type="text" #name="ngModel" [(ngModel)]="name" >
+</form>
+</div>
