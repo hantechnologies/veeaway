@@ -13,8 +13,6 @@ export class CountrylistComponent  {
       {'name':'CAN','value':'Canada'}
     ];
   selectedCountrylist = this.Countries[0];
-    // ),
-  new Countrylist('PAK', 'Pakisthan'),
-  new Countrylist('BAN', 'Bangaladesh')
+
 
 }
