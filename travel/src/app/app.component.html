@@ -2,15 +2,15 @@
   <ul>
   <li><a routerLink="/Login">Login</a></li>
   <li><a routerLink="/Register">Register</a></li>
-  <li><a routerLink="/sidemenu">Sidemenu</a></li>
+
   </ul>
 </nav>
 <router-outlet></router-outlet>
 
 <div>
-<form (ngSubmit)="onSubmit()">
-  <input type="text"  >
+  <form >
+    <input type="text" (click)="Onclick()"  >
 
-  <button type="submit">Submit</button>
-</form>
+    <button type="submit">Submit</button>
+  </form>
 </div>

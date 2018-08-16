@@ -15,7 +15,7 @@ import { CountrylistComponent } from './countrylist/countrylist.component';
 const routes : Routes = [
   { path: '', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path:'sidemenu', component: SidemenuComponent, outlet: 'sidemenu'}
+
 ];
 
 
