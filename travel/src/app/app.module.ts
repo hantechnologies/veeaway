@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {RouterModule, Routes} from "@angular/router";
 
 
 import { AppComponent } from './app.component';
@@ -12,7 +12,11 @@ import { TestDirective } from './test.directive';
 import { CountrylistComponent } from './countrylist/countrylist.component';
 
 
-
+const routes : Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path:'sidemenu', component: SidemenuComponent, outlet: 'sidemenu'}
+];
 
 
 @NgModule({
@@ -27,6 +31,7 @@ import { CountrylistComponent } from './countrylist/countrylist.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes)
 
       ],
   providers: [],

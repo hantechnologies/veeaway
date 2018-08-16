@@ -1,6 +1,16 @@
+<nav>
+  <ul>
+  <li><a routerLink="/Login">Login</a></li>
+  <li><a routerLink="/Register">Register</a></li>
+  <li><a routerLink="/sidemenu">Sidemenu</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
 
 <div>
-<form #ddForm="ngForm" (ngSubmit)="onSubmit()">
-  <input type="text" #name="ngModel" [(ngModel)]="name" >
+<form (ngSubmit)="onSubmit()">
+  <input type="text"  >
+
+  <button type="submit">Submit</button>
 </form>
 </div>
