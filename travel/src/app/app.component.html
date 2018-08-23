@@ -1,16 +1,13 @@
-<nav>
-  <ul>
-  <li><a routerLink="/Login">Login</a></li>
-  <li><a routerLink="/Register">Register</a></li>
 
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+  <a [routerLink]="['/Login']">Login</a>
+    <a [routerLink]="['/Register']">Register</a>
+
+ <router-outlet> </router-outlet>
 
 <div>
   <form >
-    <input type="text" (click)="Onclick()"  >
+    <input type="text"   >
 
-    <button type="submit">Submit</button>
+    <button ngSubmit="onSubmit()">Submit</button>
   </form>
 </div>

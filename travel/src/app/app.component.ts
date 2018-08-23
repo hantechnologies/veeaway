@@ -10,17 +10,16 @@ export class AppComponent {
 
   ccode : string;
   ccountry: string;
-  constructor(id: string, name: string) {
-    this.ccode = id;
-    this.ccountry = name;
+  constructor() {
   }
   country = [
     {id:'IND', name:'India'},
     {id:'USA', name:'United states of america'},
     {id:'CAN',name:'Canada'}];
 
-  onClick(){
-    console.log(this.ccode+ "" +this.ccountry);
+  onSubmit(){
+
+    console.log(this.ccountry.length);
   }
 
 }
