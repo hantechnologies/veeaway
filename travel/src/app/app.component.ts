@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,19 +8,16 @@ import { Component } from '@angular/core';
   providers: [AppComponent]
 })
 export class AppComponent {
+  date: Date;
+  show = false;
 
-  ccode : string;
-  ccountry: string;
-  constructor() {
-  }
-  country = [
-    {id:'IND', name:'India'},
-    {id:'USA', name:'United states of america'},
-    {id:'CAN',name:'Canada'}];
 
-  onSubmit(){
-
-    console.log(this.ccountry.length);
-  }
-
+  country = [{id: 'IND', name: 'India'},
+    {id:'USA', name:'United States of America'},
+    {id:'AFR', name:'Africa'}
+    ];
+consructor() {
+  this.date = new Date();
 }
+}
+

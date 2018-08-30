@@ -1,13 +1,19 @@
 
-  <a [routerLink]="['/Login']">Login</a>
-    <a [routerLink]="['/Register']">Register</a>
-
+  <a [routerLink]="['/login']">Login</a>
+  <a [routerLink]="['/register']">Register</a>
  <router-outlet> </router-outlet>
 
-<div>
-  <form >
-    <input type="text"   >
+  <button (click)="show=!show">{{show? 'hide' : 'show'}}</button>
+    <div *ngIf="show">
+      <p>
+        <label><input #big type="checkbox" name="size" (change)="0" checked>Big</label>
+        <label><input #small type="checkbox" name="size" (change)="0">Small</label>
+      </p>
 
-    <button ngSubmit="onSubmit()">Submit</button>
-  </form>
-</div>
+      <h3 *ngIf="big.checked">Big heading</h3>
+      <p *ngIf="small.checked">Small paragraph</p>
+    </div>
+<select (change)="onSelect($event.target.value)">
+  <option *ngFor="let of country" [value]="country.id" >{{country.name}}</option>
+</select>
+  <p> date:{{Date | date: 'dd:MM:yy'}}</p>

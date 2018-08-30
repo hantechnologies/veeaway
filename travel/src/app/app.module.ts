@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
+import { FormsModule } from "@angular/forms";
+import { DatePipe} from "@angular/common";
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +16,7 @@ import { CountrylistComponent } from './countrylist/countrylist.component';
 
 const routes : Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent }
 
 ];
 
