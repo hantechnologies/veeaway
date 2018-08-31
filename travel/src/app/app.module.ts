@@ -32,7 +32,7 @@ const routes : Routes = [
     CountrylistComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, FormsModule,
     RouterModule.forRoot(routes)
 
       ],

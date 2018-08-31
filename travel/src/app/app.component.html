@@ -13,7 +13,19 @@
       <h3 *ngIf="big.checked">Big heading</h3>
       <p *ngIf="small.checked">Small paragraph</p>
     </div>
-<select (change)="onSelect($event.target.value)">
-  <option *ngFor="let of country" [value]="country.id" >{{country.name}}</option>
-</select>
   <p> date:{{Date | date: 'dd:MM:yy'}}</p>
+
+<ul class="countries">
+  <li *ngFor="let country of country" [class.select]="country === selectCountry"
+      (click)="onSelect(country)">
+    <span>{{country.id}}</span>{{country.name}}
+  </li>
+</ul>
+  <div *ngIf="selectCountry">
+    <h2>{{selectCountry.name}}</h2>
+    <div><span>id:</span>{{selectCountry.name}}</div>
+    name:<input [(ngModel)]="selectCountry.name" palceholder="name">
+  </div>
+<!--  <input [value]="msg1" (input)="setMsg($event.target.value)">
+  {{msg1}}
+-->

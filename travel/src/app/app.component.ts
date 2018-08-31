@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   providers: [AppComponent]
 })
 export class AppComponent {
+
+  msg1: string;
   date: Date;
   show = false;
 
@@ -16,8 +18,18 @@ export class AppComponent {
     {id:'USA', name:'United States of America'},
     {id:'AFR', name:'Africa'}
     ];
+  selectCountry = this.country;
+
+onSelect(country){
+this.selectCountry = this.country;
+}
 consructor() {
   this.date = new Date();
 }
+ // setMsg(data:string) {
+   // this.msg1 = data;
+ // }
+
 }
+
 
