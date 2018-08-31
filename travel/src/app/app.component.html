@@ -1,31 +1,8 @@
-
-  <a [routerLink]="['/login']">Login</a>
-  <a [routerLink]="['/register']">Register</a>
- <router-outlet> </router-outlet>
-
-  <button (click)="show=!show">{{show? 'hide' : 'show'}}</button>
-    <div *ngIf="show">
-      <p>
-        <label><input #big type="checkbox" name="size" (change)="0" checked>Big</label>
-        <label><input #small type="checkbox" name="size" (change)="0">Small</label>
-      </p>
-
-      <h3 *ngIf="big.checked">Big heading</h3>
-      <p *ngIf="small.checked">Small paragraph</p>
-    </div>
-  <p> date:{{Date | date: 'dd:MM:yy'}}</p>
-
-<ul class="countries">
-  <li *ngFor="let country of country" [class.select]="country === selectCountry"
-      (click)="onSelect(country)">
-    <span>{{country.id}}</span>{{country.name}}
-  </li>
-</ul>
-  <div *ngIf="selectCountry">
-    <h2>{{selectCountry.name}}</h2>
-    <div><span>id:</span>{{selectCountry.name}}</div>
-    name:<input [(ngModel)]="selectCountry.name" palceholder="name">
-  </div>
-<!--  <input [value]="msg1" (input)="setMsg($event.target.value)">
-  {{msg1}}
--->
+<button appTest (click)="show=!show">{{show? 'hide' : 'show'}}</button>
+<div *ngIf="show">
+  <p>
+    <a [routerLink]="['/Sidemenu']">Menu</a>
+    <!--  <label><input #small type="checkbox" name="size" (change)="0">Small</label> -->
+  </p>
+</div>
+<app-header> </app-header>

@@ -16,7 +16,8 @@ import { CountrylistComponent } from './countrylist/countrylist.component';
 
 const routes : Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'Sidemenu', component: SidemenuComponent }
 
 ];
 
