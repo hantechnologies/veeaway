@@ -1,15 +1,33 @@
-<a [routerLink]="['/Header']">Home</a>
-<a [routerLink]="['/Login']">Login</a>
-<a [routerLink]="['/register']">Register</a>
-
-<router-outlet></router-outlet>
-
-<form>
-  <div class="form-group">
-    <button (click)="onSubmit()">Menu</button>
-    <label>From:</label>
-    <input type="datetime-local" class="form-control"  >
-    <label>End:</label>
-    <input type="datetime-local" class="form-control"  >
+<div class="menu-bar">
+<div class="menu-btn">
+  <button (click)="show=!show">{{show? 'hide' : 'show'}}</button>
+  <div *ngIf="show">
+    <ul>
+      <li><li [routerLink]="['/Sidemenu']">Menu</li>
+      <!--  <label><input #small type="checkbox" name="size" (change)="0">Small</label> -->
+    </ul>
   </div>
-</form>
+</div>
+
+  <div class="dropfrom">
+    <label>From</label>
+    <select (change)="getFromcountry()" [(ngModel)]="Fromcountry">
+      <option *ngFor="let country of countries" [ngValue]="country">{{country.name}}
+      </option>
+    </select>
+    <label>To</label>
+    <select (change)="getTocountry(Tocountry)" [(ngModel)]="Tocountry">
+      <option *ngFor="let country of countries" [ngValue]="country" >{{country.id}}
+      </option>
+    </select>
+
+    <!--  <input [value]="msg1" (input)="setMsg($event.target.value)">
+      {{msg1}}
+    -->
+  </div>
+</div>
+<div class="log-hd">
+  <a [routerLink]="['/login']">Login</a>
+  <a [routerLink]="['/register']">Register</a>
+  <router-outlet> </router-outlet>
+</div>

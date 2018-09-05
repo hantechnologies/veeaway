@@ -7,12 +7,6 @@ import { Component } from '@angular/core';
 })
 export class CountrylistComponent  {
 
-  constructor( public id: string, public name: string) { }
-
-    Countries = [{'name': 'USA', 'value':'America'},
-      {'name':'CAN','value':'Canada'}
-    ];
-  selectedCountrylist = this.Countries[0];
 
 
 }

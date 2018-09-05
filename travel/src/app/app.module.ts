@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{ RouterModule, Routes} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
+import { FormsModule } from "@angular/forms";
+import { DatePipe} from "@angular/common";
 
 
 import { AppComponent } from './app.component';
@@ -10,13 +12,16 @@ import { HeaderComponent } from './header/header.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { TestDirective } from './test.directive';
 import { CountrylistComponent } from './countrylist/countrylist.component';
+import { DataserviceService } from './dataservice.service';
 
-const Routes : Routes = [
-  { path: "", component: HeaderComponent},
-  { path: "Login", component: LoginComponent },
-  { path: "register", component: RegisterComponent }
+
+const routes : Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'Sidemenu', component: SidemenuComponent }
 
 ];
+
 
 @NgModule({
   declarations: [
@@ -29,10 +34,11 @@ const Routes : Routes = [
     CountrylistComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(Routes)
+    BrowserModule, FormsModule,
+    RouterModule.forRoot(routes)
+
       ],
-  providers: [],
+  providers: [DataserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
