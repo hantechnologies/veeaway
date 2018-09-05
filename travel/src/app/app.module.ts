@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { TestDirective } from './test.directive';
 import { CountrylistComponent } from './countrylist/countrylist.component';
+import { DataserviceService } from './dataservice.service';
 
 
 const routes : Routes = [
@@ -37,7 +38,7 @@ const routes : Routes = [
     RouterModule.forRoot(routes)
 
       ],
-  providers: [],
+  providers: [DataserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
