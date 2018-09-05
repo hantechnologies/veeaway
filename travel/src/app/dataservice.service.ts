@@ -9,6 +9,4 @@ export class DataserviceService {
        {id:'CAN', name:'Canada'}
      ];
 
-
-
 }

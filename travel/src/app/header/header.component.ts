@@ -1,5 +1,7 @@
+///<reference path="../dataservice.service.ts"/>
 import { Component, OnInit } from '@angular/core';
 import { DataserviceService} from "../dataservice.service";
+import {constructor} from 'events';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +9,15 @@ import { DataserviceService} from "../dataservice.service";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  _selectedCountry: any;
 
- selectedCountry: country = new Country('IND', 'India');
-  private Country: any;
- countries = this.Country[];
+
+  selectedCountry: this.countries = this.country ('IND', 'India')
+   this.countries = this.Country[];
 
  constructor(private _dataservice: DataserviceService){
-   this.countries = this._dataservice.country();
- }
+   this._selectedCountry = this._dataservice.country
+   }
 
 }
 
