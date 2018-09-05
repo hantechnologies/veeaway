@@ -1,28 +1,33 @@
 <div class="menu-bar">
-<div class="menu-btn">
-  <button (click)="show=!show">{{show? 'hide' : 'show'}}</button>
-  <div *ngIf="show">
-    <ul>
-      <li><li [routerLink]="['/Sidemenu']">Menu</li>
-      <!--  <label><input #small type="checkbox" name="size" (change)="0">Small</label> -->
-    </ul>
+  <div class="menu-btn">
+    <button (click)="show=!show">{{show? 'hide' : 'show'}}</button>
+    <div *ngIf="show">
+      <ul>
+        <li><li [routerLink]="['/Sidemenu']">Menu</li>
+        <!--  <label><input #small type="checkbox" name="size" (change)="0">Small</label> -->
+      </ul>
+    </div>
   </div>
-</div>
+
   <div class="dropfrom">
   <label>From</label>
-  <select (change)="onSelect($event.target.value)" [(ngModel)]="selectCountry.id" >
-    <option *ngFor="let country of country" value={{country.id}}>{{country.name}}
+  <select (change)="getFromcountry()" [(ngModel)]="Fromcountry">
+    <option *ngFor="let country of Country" value={{country.id}}>{{country.name}}
     </option>
   </select>
-    {{date | 'Date'}}
+    <label>To</label>
+    <select (change)="getTocountry()" [(ngModel)]="Tocountry">
+      <option *ngFor="let country of Country" value={{country.id}}>{{country.name}}
+      </option>
+    </select>
+
   <!--  <input [value]="msg1" (input)="setMsg($event.target.value)">
     {{msg1}}
   -->
   </div>
 </div>
 <div class="log-hd">
-<a [routerLink]="['/login']">Login</a>
-<a [routerLink]="['/register']">Register</a>
-<router-outlet> </router-outlet>
+  <a [routerLink]="['/login']">Login</a>
+  <a [routerLink]="['/register']">Register</a>
+  <router-outlet> </router-outlet>
 </div>
-
