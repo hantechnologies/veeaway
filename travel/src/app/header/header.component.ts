@@ -9,12 +9,24 @@ import { DataserviceService} from "../dataservice.service";
 export class HeaderComponent {
 
 
-  private Country: any;
- countries = this.Country;
+  private countries: any;
+  private Fromcountry: any;
+  private Tocountry: any;
+
 
  constructor(private _dataservice: DataserviceService){
    this.countries = this._dataservice.country;
+
  }
+
+  getFromcountry(){
+    console.log(this.Fromcountry);
+    console.log(this.Fromcountry.id);
+    console.log(this.Fromcountry.name);
+  }
+  getTocountry(){
+    console.log(this.Tocountry);
+  }
 
 }
 

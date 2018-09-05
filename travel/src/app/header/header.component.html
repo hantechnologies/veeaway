@@ -8,21 +8,26 @@
     </ul>
   </div>
 </div>
-  <div class="dropfrom">
-  <label>From</label>
-  <select>
-    <option *ngFor="let country of Country" value={{country.id}}>{{country.name}}
-    </option>
-  </select>
 
-  <!--  <input [value]="msg1" (input)="setMsg($event.target.value)">
-    {{msg1}}
-  -->
+  <div class="dropfrom">
+    <label>From</label>
+    <select (change)="getFromcountry()" [(ngModel)]="Fromcountry">
+      <option *ngFor="let country of countries" [ngValue]="country">{{country.name}}
+      </option>
+    </select>
+    <label>To</label>
+    <select (change)="getTocountry(Tocountry)" [(ngModel)]="Tocountry">
+      <option *ngFor="let country of countries" [ngValue]="country" >{{country.id}}
+      </option>
+    </select>
+
+    <!--  <input [value]="msg1" (input)="setMsg($event.target.value)">
+      {{msg1}}
+    -->
   </div>
 </div>
 <div class="log-hd">
-<a [routerLink]="['/login']">Login</a>
-<a [routerLink]="['/register']">Register</a>
-<router-outlet> </router-outlet>
+  <a [routerLink]="['/login']">Login</a>
+  <a [routerLink]="['/register']">Register</a>
+  <router-outlet> </router-outlet>
 </div>
-
