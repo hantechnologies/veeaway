@@ -16,7 +16,6 @@ export class HeaderComponent {
 
  constructor(private _dataservice: DataserviceService){
    this.countries = this._dataservice.country;
-
  }
 
   getFromcountry(){
