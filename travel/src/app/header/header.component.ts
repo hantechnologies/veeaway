@@ -8,12 +8,12 @@ import { DataserviceService} from "../dataservice.service";
 })
 export class HeaderComponent {
 
- selectedCountry: country = new Country('IND', 'India');
+
   private Country: any;
- countries = this.Country[];
+ countries = this.Country;
 
  constructor(private _dataservice: DataserviceService){
-   this.countries = this._dataservice.country();
+   this.countries = this._dataservice.country;
  }
 
 }
